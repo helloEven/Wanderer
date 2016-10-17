@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ShareView" customModule="Wanderer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="369" height="560"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sye-TQ-mKM">
+                    <rect key="frame" x="0.0" y="0.0" width="369" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="iWe-Z4-m9J"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="爱his的hi爱上的撒爱上" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOt-tT-Unl">
+                    <rect key="frame" x="99" y="170" width="172" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@是多少" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkT-Nm-hON">
+                    <rect key="frame" x="159" y="201" width="51" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大大声我打算啥地方大大声我打算啥地方大大声我打算啥地方大大声我打算啥地方大大声我打算啥地方大大声我打算啥地方大大声我打算啥地方大大声我打算啥地方大大声我打算啥地方大大声我打算啥地方大大声我打算啥地方大大声我打算啥地方大大声我打算啥地方" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyh-w7-ZjV">
+                    <rect key="frame" x="0.0" y="232" width="369" height="115"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_map_20x20_" translatesAutoresizingMaskIntoConstraints="NO" id="aQV-pE-0Ne">
+                    <rect key="frame" x="0.0" y="362" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="9rC-px-mNK"/>
+                        <constraint firstAttribute="width" constant="20" id="Lfl-ZL-2W1"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxE-9b-xZe">
+                    <rect key="frame" x="30" y="363" width="30" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="aQV-pE-0Ne" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3SR-Ys-DGG"/>
+                <constraint firstItem="cOt-tT-Unl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="BMA-X3-qng"/>
+                <constraint firstItem="aQV-pE-0Ne" firstAttribute="top" secondItem="Tyh-w7-ZjV" secondAttribute="bottom" constant="15" id="CVE-k0-J2Q"/>
+                <constraint firstItem="Tyh-w7-ZjV" firstAttribute="top" secondItem="HkT-Nm-hON" secondAttribute="bottom" constant="15" id="Ciw-dP-yCw"/>
+                <constraint firstItem="Tyh-w7-ZjV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="G4F-lb-yXJ"/>
+                <constraint firstItem="QxE-9b-xZe" firstAttribute="leading" secondItem="aQV-pE-0Ne" secondAttribute="trailing" constant="10" id="HQL-Z6-25N"/>
+                <constraint firstItem="Sye-TQ-mKM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JoN-86-iky"/>
+                <constraint firstItem="HkT-Nm-hON" firstAttribute="top" secondItem="cOt-tT-Unl" secondAttribute="bottom" constant="10" id="L1A-Tl-kHs"/>
+                <constraint firstItem="Sye-TQ-mKM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="XtA-WP-HHp"/>
+                <constraint firstItem="QxE-9b-xZe" firstAttribute="centerY" secondItem="aQV-pE-0Ne" secondAttribute="centerY" id="cVK-t1-cmm"/>
+                <constraint firstItem="HkT-Nm-hON" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ceb-62-UrM"/>
+                <constraint firstItem="cOt-tT-Unl" firstAttribute="top" secondItem="Sye-TQ-mKM" secondAttribute="bottom" constant="20" id="emq-BV-8XH"/>
+                <constraint firstAttribute="trailing" secondItem="Tyh-w7-ZjV" secondAttribute="trailing" id="kZ0-yn-sfa"/>
+                <constraint firstAttribute="trailing" secondItem="Sye-TQ-mKM" secondAttribute="trailing" id="klE-5y-rM6"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="desLabel" destination="Tyh-w7-ZjV" id="anq-QO-qCe"/>
+                <outlet property="locationLabel" destination="QxE-9b-xZe" id="AEA-DB-s4a"/>
+                <outlet property="nameLabel" destination="HkT-Nm-hON" id="56Z-gG-eo1"/>
+                <outlet property="topImageView" destination="Sye-TQ-mKM" id="P9i-Uk-BF5"/>
+                <outlet property="topicLabel" destination="cOt-tT-Unl" id="X0Q-dZ-T8P"/>
+            </connections>
+            <point key="canvasLocation" x="176.5" y="346"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_map_20x20_" width="20" height="20"/>
+    </resources>
+</document>

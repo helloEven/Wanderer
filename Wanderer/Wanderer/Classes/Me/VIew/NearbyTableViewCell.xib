@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="NearbyTableViewCell" customModule="Wanderer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="336" height="119"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oAd-UE-5hP">
+                        <rect key="frame" x="10" y="10" width="100" height="99"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="AFP-zv-6Dl"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美味白莎吉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aer-ld-5UY">
+                        <rect key="frame" x="120" y="20" width="85" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="双桥路118号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEw-rg-vew">
+                        <rect key="frame" x="120" y="52" width="73" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="234想去" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hy6-dm-ijB">
+                        <rect key="frame" x="120" y="81" width="58" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hy6-dm-ijB" firstAttribute="leading" secondItem="oAd-UE-5hP" secondAttribute="trailing" constant="10" id="IEn-Lw-drm"/>
+                    <constraint firstItem="aer-ld-5UY" firstAttribute="leading" secondItem="oAd-UE-5hP" secondAttribute="trailing" constant="10" id="Lm8-AW-bIQ"/>
+                    <constraint firstAttribute="bottom" secondItem="hy6-dm-ijB" secondAttribute="bottom" constant="20" id="Qwm-YO-vIV"/>
+                    <constraint firstItem="oAd-UE-5hP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Tks-Di-GXF"/>
+                    <constraint firstItem="OEw-rg-vew" firstAttribute="centerY" secondItem="oAd-UE-5hP" secondAttribute="centerY" id="Wfk-0Y-BSL"/>
+                    <constraint firstItem="aer-ld-5UY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="X4X-x2-JKj"/>
+                    <constraint firstItem="OEw-rg-vew" firstAttribute="leading" secondItem="oAd-UE-5hP" secondAttribute="trailing" constant="10" id="jEV-H6-QRR"/>
+                    <constraint firstAttribute="bottom" secondItem="oAd-UE-5hP" secondAttribute="bottom" constant="10" id="kJB-mk-1Ut"/>
+                    <constraint firstItem="oAd-UE-5hP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="zOn-Yh-qXa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addressLabel" destination="OEw-rg-vew" id="mMP-Tv-zGr"/>
+                <outlet property="pictureImageView" destination="oAd-UE-5hP" id="cmo-AI-reF"/>
+                <outlet property="topicLabel" destination="aer-ld-5UY" id="bh0-6L-Uj2"/>
+                <outlet property="wishCountLabel" destination="hy6-dm-ijB" id="c68-Oq-oFY"/>
+            </connections>
+            <point key="canvasLocation" x="272" y="243"/>
+        </tableViewCell>
+    </objects>
+</document>

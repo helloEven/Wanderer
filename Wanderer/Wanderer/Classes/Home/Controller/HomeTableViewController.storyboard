@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GMx-HU-3JZ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--首页-->
+        <scene sceneID="9qo-Ne-yjF">
+            <objects>
+                <navigationController id="GMx-HU-3JZ" customClass="ComonNavigationController" customModule="Wanderer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首页" image="tab_home" selectedImage="tab_home_selected" id="mW0-td-8Yy"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ihd-WE-4up">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dGe-EL-Xqu" kind="relationship" relationship="rootViewController" id="C47-NA-cXM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7pk-oq-Qt5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17.5" y="-1052.5"/>
+        </scene>
+        <!--Home Table View Controller-->
+        <scene sceneID="Ovu-OA-W2X">
+            <objects>
+                <tableViewController id="dGe-EL-Xqu" customClass="HomeTableViewController" customModule="Wanderer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="iLC-db-p66">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="dGe-EL-Xqu" id="vVY-eP-M1O"/>
+                            <outlet property="delegate" destination="dGe-EL-Xqu" id="01f-WU-bxz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="6tE-nE-uPt"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s1m-Ks-Ulw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="443.5" y="-1052.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_home" width="24" height="24"/>
+        <image name="tab_home_selected" width="24" height="24"/>
+    </resources>
+</document>

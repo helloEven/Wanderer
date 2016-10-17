@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="Wanderer" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="CKQ-3O-fRC" id="JKx-hT-szv"/>
+                <outlet property="goBtn" destination="MO4-tC-vXf" id="FGL-0d-UE0"/>
+                <outlet property="pageControl" destination="pOy-SC-NId" id="37G-gE-Wov"/>
+                <outlet property="scrollView" destination="fmK-zS-8i6" id="muV-b8-x64"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CKQ-3O-fRC">
+                    <rect key="frame" x="0.0" y="387" width="375" height="239"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmK-zS-8i6">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="99" id="46J-F7-9mf"/>
+                            </constraints>
+                        </scrollView>
+                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="pOy-SC-NId">
+                            <rect key="frame" x="151" y="101" width="72" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="37" id="DBc-EL-9HH"/>
+                                <constraint firstAttribute="width" constant="72" id="U9h-ob-F9s"/>
+                            </constraints>
+                            <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="currentPageIndicatorTintColor" red="0.27450980390000002" green="0.67843137249999996" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                        </pageControl>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MO4-tC-vXf">
+                            <rect key="frame" x="127" y="146" width="120" height="40"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="kox-Un-lS5"/>
+                                <constraint firstAttribute="height" constant="40" id="oBW-rD-CXt"/>
+                            </constraints>
+                            <state key="normal" title="Go">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="go" destination="-1" eventType="touchUpInside" id="8Va-M9-O4h"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="pOy-SC-NId" firstAttribute="top" secondItem="fmK-zS-8i6" secondAttribute="bottom" constant="2" id="3uD-7R-dSY"/>
+                        <constraint firstAttribute="height" constant="239" id="7Er-g0-yBD"/>
+                        <constraint firstAttribute="trailing" secondItem="fmK-zS-8i6" secondAttribute="trailing" id="BlJ-Ql-5Vc"/>
+                        <constraint firstItem="MO4-tC-vXf" firstAttribute="centerX" secondItem="CKQ-3O-fRC" secondAttribute="centerX" id="IPE-y4-7It"/>
+                        <constraint firstItem="fmK-zS-8i6" firstAttribute="leading" secondItem="CKQ-3O-fRC" secondAttribute="leading" id="S04-H7-BVI"/>
+                        <constraint firstItem="MO4-tC-vXf" firstAttribute="top" secondItem="pOy-SC-NId" secondAttribute="bottom" constant="8" id="dhK-bh-fKC"/>
+                        <constraint firstItem="fmK-zS-8i6" firstAttribute="top" secondItem="CKQ-3O-fRC" secondAttribute="top" id="ekW-SV-A2R"/>
+                        <constraint firstItem="pOy-SC-NId" firstAttribute="centerX" secondItem="CKQ-3O-fRC" secondAttribute="centerX" id="tpu-Bg-BNL"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="CKQ-3O-fRC" secondAttribute="bottom" constant="41" id="84q-tN-LDT"/>
+                <constraint firstItem="CKQ-3O-fRC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EaU-sx-X77"/>
+                <constraint firstAttribute="trailing" secondItem="CKQ-3O-fRC" secondAttribute="trailing" id="nEh-Ks-56J"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="303.5" y="268.5"/>
+        </view>
+    </objects>
+</document>

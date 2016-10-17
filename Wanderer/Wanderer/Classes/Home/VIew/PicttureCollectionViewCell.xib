@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="picCell" id="gTV-IL-0wX" customClass="PicttureCollectionViewCell" customModule="Wanderer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="294" height="155"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="294" height="155"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GTE-YB-Aqf">
+                        <rect key="frame" x="0.0" y="0.0" width="294" height="155"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="GTE-YB-Aqf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Agv-XP-kzd"/>
+                <constraint firstAttribute="trailing" secondItem="GTE-YB-Aqf" secondAttribute="trailing" id="I3J-PS-edH"/>
+                <constraint firstItem="GTE-YB-Aqf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cea-Jw-8md"/>
+                <constraint firstAttribute="bottom" secondItem="GTE-YB-Aqf" secondAttribute="bottom" id="mAY-TZ-K0t"/>
+            </constraints>
+            <size key="customSize" width="294" height="155"/>
+            <connections>
+                <outlet property="imageView" destination="GTE-YB-Aqf" id="kDT-sg-C88"/>
+            </connections>
+            <point key="canvasLocation" x="331" y="278.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
