@@ -61,11 +61,13 @@ extension HomeTableViewController {
         self.otherDestination.removeAll()
         self.europeDestination.removeAll()
         self.tWAMXGDetination.removeAll()
+        SVProgressHUD.setDefaultMaskType(.Black)
         SVProgressHUD.showWithStatus("正在加载网络数据")
         let group = dispatch_group_create()
         dispatch_group_enter(group)
         NetWorkingTools.sharedInstance.requestChinaHotDestinationData { (result, error) in
             guard let resultArray = result else {
+                SVProgressHUD.showErrorWithStatus("网络数据错误")
                 return
             }
             for dict in resultArray {
@@ -79,6 +81,7 @@ extension HomeTableViewController {
         
         NetWorkingTools.sharedInstance.requestTWAMXGData { (result, error) in
             guard let resultArray = result else {
+                SVProgressHUD.showErrorWithStatus("网络数据错误")
                 return
             }
             for dict in resultArray {
@@ -91,6 +94,7 @@ extension HomeTableViewController {
         
         NetWorkingTools.sharedInstance.requestAisianHotDestinationData { (result, error) in
             guard let resultArray = result else {
+                SVProgressHUD.showErrorWithStatus("网络数据错误")
                 return
             }
             for dict in resultArray {
@@ -103,6 +107,7 @@ extension HomeTableViewController {
         
         NetWorkingTools.sharedInstance.requestEuropeHotDestinationData { (result, error) in
             guard let resultArray = result else {
+                SVProgressHUD.showErrorWithStatus("网络数据错误")
                 return
             }
             for dict in resultArray {
@@ -116,7 +121,7 @@ extension HomeTableViewController {
         
         NetWorkingTools.sharedInstance.requestOtherHotDestinationData { (result, error) in
             guard let resultArray = result else {
-                
+                SVProgressHUD.showErrorWithStatus("网络数据错误")
                 return
             }
             for dict in resultArray {

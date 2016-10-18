@@ -43,7 +43,7 @@ extension RankListTableViewController {
         SVProgressHUD.showWithStatus("正在加载网络数据")
         NetWorkingTools.sharedInstance.requestRankListData(urlString!) { (result, error) in
             if error != nil {
-                print(error)
+                SVProgressHUD.showErrorWithStatus("网络数据错误")
                 return
             }
             

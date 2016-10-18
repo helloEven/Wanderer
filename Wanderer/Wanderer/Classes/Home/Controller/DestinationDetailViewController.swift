@@ -39,6 +39,7 @@ class DestinationDetailViewController: UIViewController {
         
      
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DestinationDetailViewController.showRouteDetailDestination(_:)), name: kShowRouteDetailBottonClick, object: nil)
+       NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DestinationDetailViewController.jumpToNextDestination(_:)), name: kNearDestinationCollectionViewCellClick, object: nil)
         
     }
     
@@ -122,7 +123,7 @@ extension DestinationDetailViewController {
         
         self.navigationController?.pushViewController(puVC, animated: true)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DestinationDetailViewController.jumpToNextDestination(_:)), name: kNearDestinationCollectionViewCellClick, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name:kNearDestinationCollectionViewCellClick, object: nil)
        
         
     }
@@ -135,6 +136,7 @@ extension DestinationDetailViewController {
         puVC.model = model
         
         self.navigationController?.pushViewController(puVC, animated: true)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: kShowRouteDetailBottonClick, object: nil)
         
         
     }

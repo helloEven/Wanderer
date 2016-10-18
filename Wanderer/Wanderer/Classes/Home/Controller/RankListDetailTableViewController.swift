@@ -34,6 +34,7 @@ extension RankListDetailTableViewController {
         tableView.estimatedRowHeight = 400
         self.tableView.backgroundColor = UIColor.getGlobeColorWithAlpha(1.0)
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.separatorStyle = .None
         tableView.separatorColor = UIColor(colorLiteralRed: 230 / 255.0, green: 230 / 255.0, blue: 230 / 255.0, alpha: 1.0)
         tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 20)
 
@@ -45,7 +46,7 @@ extension RankListDetailTableViewController {
         SVProgressHUD.showWithStatus("正在加载网络数据")
         NetWorkingTools.sharedInstance.requestRankListDetailData("\(id)" + ".json") { (result, error) in
             if error != nil {
-                print(error)
+    
                 SVProgressHUD.showErrorWithStatus("网络数据出错")
                 return
             }

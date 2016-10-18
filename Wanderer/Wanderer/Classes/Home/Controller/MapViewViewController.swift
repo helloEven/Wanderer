@@ -16,6 +16,7 @@ class MapViewViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     var userLocation : CLLocation?
+    var isNav : Bool = false
     
     lazy var cllocationM : CLLocationManager = {
         let cllocationM = CLLocationManager()
@@ -43,6 +44,11 @@ class MapViewViewController: UIViewController {
         super.viewWillLayoutSubviews()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage.getImageWithColor(UIColor.getGlobeColorWithAlpha(0.0)), forBarMetrics: .Default)
         }
+    
+    deinit {
+    
+        SVProgressHUD.dismiss()
+    }
 }
 // MARK:- 设置UI
 extension MapViewViewController {
@@ -101,6 +107,7 @@ extension MapViewViewController {
     func popVC() {
         self.navigationController?.popViewControllerAnimated(true)
     }
+    
 }
 
 
@@ -156,12 +163,22 @@ extension MapViewViewController : MKMapViewDelegate,UICollectionViewDelegate,UIC
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let newLocation = locations.last else { return }
         self.userLocation = newLocation
+        if isNav == true {
+            startNav(self.annotationView!)
+            isNav = false
+        }
     }
     
 
     func startNav(annotationView : MKAnnotationView) {
         
         // CLLocation(latitude: 30.67, longitude: 104.06)
+        if self.userLocation == nil {
+            SVProgressHUD.setDefaultMaskType(.Black)
+            SVProgressHUD.showWithStatus("正在获取您当前的位置，请稍等")
+            return
+        }
+        SVProgressHUD.showWithStatus("正在打开地图")
         geoCoder.reverseGeocodeLocation(self.userLocation!) { (CLPls, error) in
             if error == nil {
                 let userPL = CLPls?.first
@@ -188,6 +205,7 @@ extension MapViewViewController : MKMapViewDelegate,UICollectionViewDelegate,UIC
 
                     }
                 })
+                SVProgressHUD.dismiss()
             } else {
                 print(error)
                 SVProgressHUD.setDefaultMaskType(.Clear)
@@ -211,6 +229,7 @@ extension MapViewViewController : MKMapViewDelegate,UICollectionViewDelegate,UIC
             ac.addAction(UIAlertAction(title: "苹果地图导航", style: .Default, handler:{ (complete) in
                 
                 // 开始导航
+                self.isNav = true
                 self.startNav(self.annotationView!)
                 
             }))

@@ -27,7 +27,7 @@ class ShareViewController: UIViewController {
     @IBAction func shareMore() {
         let ac = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
         ac.addAction(UIAlertAction(title: "分享到QQ", style: .Default, handler: { (ac) in
-            UMSocialSnsService.presentSnsController(self, appKey: nil, shareText: self.model?.topic, shareImage: self.image, shareToSnsNames: [UMShareToQQ], delegate: self)
+            UMSocialSnsService.presentSnsIconSheetView(self, appKey: nil, shareText: self.model?.topic, shareImage: self.image, shareToSnsNames: [UMShareToQQ], delegate: nil)
         }))
         ac.addAction(UIAlertAction(title: "下载到相册", style: .Default, handler: { (ac) in
              UIImageWriteToSavedPhotosAlbum(self.image!, nil, nil, nil)
@@ -40,13 +40,13 @@ class ShareViewController: UIViewController {
     }
 
     @IBAction func shareToWeibo(sender: AnyObject) {
-        UMSocialSnsService.presentSnsController(self, appKey: nil, shareText: self.model?.topic, shareImage: self.image, shareToSnsNames: [UMShareToSina], delegate: self)
+        UMSocialSnsService.presentSnsIconSheetView(self, appKey: nil, shareText: self.model?.topic, shareImage: self.image, shareToSnsNames: [UMShareToSina], delegate: self)
     }
     @IBAction func shareToFriendCircle(sender: AnyObject) {
-        UMSocialSnsService.presentSnsController(self, appKey: nil, shareText: self.model?.topic, shareImage: self.image, shareToSnsNames: [UMShareToWechatTimeline], delegate: self)
+        UMSocialSnsService.presentSnsIconSheetView(self, appKey: nil, shareText: self.model?.topic, shareImage: self.image, shareToSnsNames: [UMShareToWechatTimeline], delegate: self)
     }
     @IBAction func shareToFriends() {
-        UMSocialSnsService.presentSnsController(self, appKey: nil, shareText: self.model?.topic, shareImage: self.image, shareToSnsNames: [UMShareToWechatSession], delegate: self)
+        UMSocialSnsService.presentSnsIconSheetView(self, appKey: nil, shareText: self.model?.topic, shareImage: self.image, shareToSnsNames: [UMShareToWechatSession], delegate: self)
     }
     
     

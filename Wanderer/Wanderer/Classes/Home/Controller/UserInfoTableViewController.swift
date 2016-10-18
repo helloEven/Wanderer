@@ -54,28 +54,40 @@ extension UserInfoTableViewController {
         SVProgressHUD.setDefaultMaskType(.Black)
         NetWorkingTools.sharedInstance.requestUserInfoData("\(id)") { (result, error) in
             guard let resultDict = result else {
+                SVProgressHUD.showErrorWithStatus("网络数据错误")
                 return
             }
             
             self.userModel = UserModel(dict: resultDict)
             
             
-            let headerView = UserHeaderView.getUserHeaderView()
-            headerView.height = 200
-            headerView.model = self.userModel
-            self.tableView.tableHeaderView = headerView
+            
 
             
             SDWebImageDownloader.sharedDownloader().downloadImageWithURL(NSURL(string: self.userModel!.photo_url!), options: [], progress: nil, completed: { (_, _, _, _) in
-                headerView.iconImageView.image = UIImageTool.imageWithBorder(5, color: UIColor.whiteColor(), image: SDWebImageManager.sharedManager().imageCache.imageFromDiskCacheForKey(self.userModel!.photo_url))
+                dispatch_async(dispatch_get_main_queue(), {
+                    
+                    let headerView = UserHeaderView.getUserHeaderView()
+                    headerView.height = 200
+                    headerView.model = self.userModel
+                    self.tableView.tableHeaderView = headerView
+                    
+                    headerView.iconImageView.image = UIImageTool.imageWithBorder(5, color: UIColor.whiteColor(), image: SDWebImageManager.sharedManager().imageCache.imageFromDiskCacheForKey(self.userModel!.photo_url))
+                    self.tableView.reloadData()
+                })
+                
             })
             
             SDWebImageDownloader.sharedDownloader().downloadImageWithURL(NSURL(string: self.userModel!.header_photo_url!), options: [], progress: nil, completed: { (image, _, _, _) in
                 //print(self.userModel!.header_photo_url)
-                self.image = image
+                dispatch_async(dispatch_get_main_queue(), { 
+                    self.image = image
+                    self.tableView.reloadData()
+                })
+                
             })
             
-            self.tableView.reloadData()
+            
             
             
         }

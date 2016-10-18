@@ -72,10 +72,16 @@ class UserActivityCell: UITableViewCell {
  
 
     @IBAction func favarite(sender: UIButton) {
+        let vc = LoginController()
+        self.window?.rootViewController?.presentViewController(vc, animated: true, completion: nil)
     }
     @IBAction func comment(sender: UIButton) {
+        let vc = LoginController()
+        self.window?.rootViewController?.presentViewController(vc, animated: true, completion: nil)
     }
     @IBAction func like(sender: UIButton) {
+        let vc = LoginController()
+        self.window?.rootViewController?.presentViewController(vc, animated: true, completion: nil)
     }
     @IBAction func showMore(sender: UIButton) {
         let ac = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
